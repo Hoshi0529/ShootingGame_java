@@ -13,7 +13,12 @@ public class GameFrame extends MyFrame{
 				PlayerBullet b=GameWorld.playerBullets.get(i);
 				b.draw(this);
 				b.move();
+				if(b.y<0) {
+					GameWorld.playerBullets.remove(i);
+				}
+				  {
 				i++;
+			}
 			}
 			sleep(0.03);
 		}
