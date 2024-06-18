@@ -15,5 +15,4 @@ public class RandomEnemy extends Enemy{
 		f.setColor(0, 128, 0);
 		f.fillRect(x+20, y, 10, 20);
 	}
-
 }

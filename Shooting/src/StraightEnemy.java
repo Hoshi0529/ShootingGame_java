@@ -9,6 +9,4 @@ public class StraightEnemy extends Enemy{
 		f.setColor(0, 0, 0);
 		f.fillRect(x, y, 14, 15);
 	}
-
-
 }

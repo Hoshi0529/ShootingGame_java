@@ -18,5 +18,4 @@ public class CurveEnemy extends Enemy{
 		f.setColor(256, 256, 256);
 		f.fillOval(x+5, y, 20, 30);
 	}
-
 }
