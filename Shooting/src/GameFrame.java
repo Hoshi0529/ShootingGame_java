@@ -6,6 +6,7 @@ public class GameFrame extends MyFrame{
 		GameWorld.playerBullets=new Vector<PlayerBullet>();
 		GameWorld.enemies=new Vector<Enemy>();
 		GameWorld.enemies.add(new EnemyBase(100,50,1,0));
+		GameWorld.enterPressed=false;
 		while(true) {
 			clear();
 			GameWorld.player.draw(this);
@@ -14,7 +15,6 @@ public class GameFrame extends MyFrame{
 			moveEnemies();
 			checkPlayerAndEnemis();
 			checkPlayerBulletsAndEnemies();
-			
 			if(GameWorld.enemies.size()==0) {
 				setColor(0,0,0);
 				drawString("クリア!",100,200,40);
