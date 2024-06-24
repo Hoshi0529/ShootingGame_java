@@ -41,7 +41,6 @@ public class GameFrame extends MyFrame{
 				i++;
 			}
 		}
-	   
    }	
    public void checkPlayerAndEnemis() {
 	   for(int i=0; i<GameWorld.enemies.size();i++) {
@@ -52,7 +51,6 @@ public class GameFrame extends MyFrame{
 		   }
 	   }
    }
-   
    public void checkPlayerBulletsAndEnemies() {
 	   int i=0; 
 	   while(i<GameWorld.playerBullets.size()) {
@@ -78,9 +76,6 @@ public class GameFrame extends MyFrame{
 	   }
    }
    public boolean checkHit(Character a,Character b ) {
-	  return Math.abs(a.x-b.x)<=30 && Math.abs(a.y-b.y)<=30 ;
-		
-	   
+	  return Math.abs(a.x-b.x)<=10 && Math.abs(a.y-b.y)<=10 ;
    }
-   
 }
