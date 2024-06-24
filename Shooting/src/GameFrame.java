@@ -4,6 +4,7 @@ public class GameFrame extends MyFrame{
 		GameWorld.player = new Player(100,300,0,0);
 		addKeyListener(GameWorld.player);
 		GameWorld.stage=1;
+		GameWorld.score=0;
 		while(true) {
 			GameWorld.player.x=100;
 			GameWorld.player.y=300;
@@ -16,6 +17,8 @@ public class GameFrame extends MyFrame{
 				clear();
 				drawString("Stage = "+GameWorld.stage,
 						300,50,15);
+				drawString("Score = "+GameWorld.score,
+						300,80,15);
 				GameWorld.player.draw(this);
 				GameWorld.player.move();
 				movePlayerBullets();
@@ -34,6 +37,8 @@ public class GameFrame extends MyFrame{
 					drawString("ゲームオーバー!",50,200,40);
 					if(GameWorld.enterPressed) {
 						GameWorld.stage=1;
+						GameWorld.stage=0;
+								
 						break;
 					}
 				}
@@ -93,6 +98,7 @@ public class GameFrame extends MyFrame{
 				   e.life--;
 			 }
 			    if(e.life<=0){
+			    	GameWorld.score+=e.score;
 				   GameWorld.enemies.remove(j);
 			   }else {
 			   j++;}
